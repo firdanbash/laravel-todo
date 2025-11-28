@@ -1,59 +1,77 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Laravel Todo App
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A modern, reactive Todo List application built with the **Laravel** framework and **Livewire**. This project provides a seamless, single-page application (SPA) feel for managing tasks, complete with authentication and real-time updates.
 
-## About Laravel
+## 🚀 Features
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+This application is designed to help users stay organized with a clean and responsive interface.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+* **Secure Authentication**: Full user registration and login system.
+* **Task Management**: Create, read, update, and delete (CRUD) todo items effortlessly.
+* **Status Tracking**: Mark tasks as completed or pending with a single click.
+* **Smart Filtering**: Filter your view to see "All", "Pending", or "Completed" tasks.
+* **Reactive UI**: Built with **Livewire 3** for dynamic interactions without page reloads.
+* **Modern Design**: Styled using **Tailwind CSS 4** and **Flowbite** for a polished, mobile-friendly look.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 🛠️ Tech Stack
 
-## Learning Laravel
+* **Backend**: PHP 8.2+, Laravel Framework 12.x
+* **Frontend**: Livewire 3.7, Blade Templates
+* **Styling**: Tailwind CSS 4, Flowbite 4
+* **Database**: MySQL / SQLite (configurable)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+## 🏁 Getting Started
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Follow these steps to set up the project locally on your machine.
 
-## Laravel Sponsors
+### Prerequisites
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+Ensure you have the following installed:
+* [PHP](https://www.php.net/) (v8.2 or higher)
+* [Composer](https://getcomposer.org/)
+* [Node.js](https://nodejs.org/) & NPM
 
-### Premium Partners
+### Installation
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+1.  **Clone the repository**
+    ```bash
+    git clone [https://github.com/yourusername/laravel-todo.git](https://github.com/yourusername/laravel-todo.git)
+    cd laravel-todo
+    ```
 
-## Contributing
+2.  **Install Backend Dependencies**
+    ```bash
+    composer install
+    ```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+3.  **Install Frontend Dependencies**
+    ```bash
+    npm install
+    ```
 
-## Code of Conduct
+4.  **Environment Setup**
+    Copy the example environment file and configure your database settings:
+    ```bash
+    cp .env.example .env
+    ```
+    *Open `.env` and check your database credentials (DB_DATABASE, DB_USERNAME, etc.).*
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+5.  **Generate Application Key**
+    ```bash
+    php artisan key:generate
+    ```
 
-## Security Vulnerabilities
+6.  **Run Database Migrations**
+    Create the necessary tables (Users and Todos):
+    ```bash
+    php artisan migrate
+    ```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### Running the Application
 
-## License
+This project includes a convenient setup script and commands for development.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+**Option 1: Quick Start (Recommended)**
+You can start the server, queue listener, and Vite development server all at once:
+```bash
+composer run dev
