@@ -23,10 +23,16 @@ class AuthPage extends Component
 
     public function switchToLogin()
     {
+        $this->resetErrorBag();
+        $this->resetValidation();
+        $this->reset(['name', 'email', 'password']);
         $this->mode = 'login';
     }
     public function switchToRegister()
     {
+        $this->resetErrorBag();
+        $this->resetValidation();
+        $this->reset(['name', 'email', 'password']);
         $this->mode = 'register';
     }
 
